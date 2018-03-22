@@ -12,21 +12,29 @@
         <p>Bem-vindo,
             <%- usuario.nome %>
         </p>
-        <h1>Cadastro de Eventos</h1>
+        <h1>Cadastro de Cursos</h1>
         <h4>Forneça os dados para o cadastro</h4>
     </header>
     <section>
-        <form action="/novoEvento" method="post">
-            Descrição:
+        <form action="/novoCurso" method="post">
+            Código:
             <br />
-            <input type="text" name="evento[descricao]" placeholder="Descrição">
-            <br> Data:
+            <input type="text" name="curso[codigo]" placeholder="Descrição">
+            <br> Descrição:
             <br />
-            <input type="text" name="evento[data]" placeholder="Data">
-            <br> Responsável:
+            <input type="text" name="curso[descricao]" placeholder="Curso">
+            <br> CH:
             <br />
-            <input type="text" name="evento[responsavel]" placeholder="Responsável">
+            <input type="text" name="curso[ch]" placeholder="Responsável">
+            <br> Categoria do curso:
             <br>
+            <select name="curso[categoria]" id="categoria">
+                <option value="Administração">Administração</option>
+                <option value="Logistica">Logistica</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Português">Português</option>
+                <option value="Técnologia da Informação">Técnologia da Informação</option>
+            </select>
             <button type="submit">Enviar</button>
         </form>
     </section>

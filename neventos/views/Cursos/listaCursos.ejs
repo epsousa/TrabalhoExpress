@@ -16,10 +16,37 @@
         <h4>Selecione uma opção na lista para executá-la</h4>
     </header>
     <section>
-        <!--será implementado em breve-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descricao</th>
+                    <th>Carga Horaria</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cursos.forEach(function(curso, index) { %>
+                    <tr>
+                        <td>
+                            <%= curso.codigo %>
+                        </td>
+                        <td>
+                            <%= curso.descricao %>
+                        </td>
+                        <td>
+                            <%= curso.ch %>
+                        </td>
+                        <td>
+                            <%= curso.categoria %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
     </section>
     <footer>
-        <small>Sistema de Cadastro de Cursos e Convidados</small>
+        <small>Sistema de cadastro de Cursos</small>
     </footer>
 </body>
 
