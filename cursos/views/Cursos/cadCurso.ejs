@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Eventos e Convidados - Login</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Cadastro de Cursos</h1>
+        <h4>Forneça os dados para o cadastro</h4>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-md-4">
+                <form action="/novoCurso" method="post">
+                    Código:
+                    <br />
+                    <input class="form-control" type="text" name="curso[codigo]" placeholder="Codigo">
+                    <br> Descrição:
+                    <br />
+                    <input class="form-control" type="text" name="curso[descricao]" placeholder="Descricao">
+                    <br> Carga Horaria:
+                    <br />
+                    <input class="form-control" type="number" name="curso[ch]" placeholder="Carga Horaria">
+                    <br> Categoria do curso:
+                    <br>
+                    <select class="form-control" name="curso[categoria]" id="categoria">
+                        <option value="Administração">Administração</option>
+                        <option value="Logistica">Logistica</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Português">Português</option>
+                        <option value="Técnologia da Informação">Técnologia da Informação</option>
+                    </select>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de Eventos e Convidados</small>
+    </footer>
+</body>
+
+</html>
